@@ -1,0 +1,26 @@
+{
+  "name": "sass-jade-gulp",
+  "version": "1.0.0",
+  "description": "hacksu sass, jade, and gulp talk",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hacksu/sass-jade-gulp.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hacksu/sass-jade-gulp/issues"
+  },
+  "homepage": "https://github.com/hacksu/sass-jade-gulp#readme",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sass": "^2.0.4",
+    "gulp-serve": "^1.2.0"
+  }
+}
