@@ -16,17 +16,22 @@ gulp.task('styles', function () {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('build', ['templates', 'styles']);
+gulp.task('images', function () {
+  return gulp.src('img/*.*')
+  .pipe(gulp.dest('dist/img'))
+});
+
+gulp.task('build', ['templates', 'styles', 'images']);
 
 gulp.task('default', ['build'], function () {
   gulp.watch(
-    ['styles/*.scss', 'templates/*.jade'],
+    ['styles/*.scss', 'templates/*.jade', 'img/*.*'],
     ['build']
   );
 });
 
 gulp.task('watch', function() {
-  gulp.watch(['styles/*.scss', 'templates/*.jade'], ['build']);
+  gulp.watch(['styles/*.scss', 'templates/*.jade', 'img/*.*'], ['build']);
 });
 
 gulp.task('serve', ['watch'], serve({

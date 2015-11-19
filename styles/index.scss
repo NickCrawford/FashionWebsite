@@ -6,7 +6,7 @@ $yellow: #c8ffbe; //rgba(200, 255, 190, 100)
 $gray: #838383;
 $white: #FFFFFF;
 
-$section-colors: $green, $blue, $purple, $red, $yellow; 
+$section-colors: $green, $blue, $purple, $red, $yellow;
 
 *{
   font-family: Open Sans;
@@ -68,7 +68,7 @@ section {
 }
 
 #start-logo {
-	background: url(../img/logo.png) no-repeat center center;
+	background: url(img/logo.png) no-repeat center center;
 	background-size: cover;
 	width: 22vw;
 	height: 22vw;
