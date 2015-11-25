@@ -42,6 +42,11 @@ header {
 	display: none;
 	position: fixed;
 	top: 0;
+	left: 0;
+	right: 0;
+	height: 75px;
+	background-color: white;
+	z-index: 10;
 }
 
 section {
@@ -52,17 +57,42 @@ section {
 	min-height: 500px;
 }
 
+.btn {
+	display: inline-block;
+	color: $white;
+	background-color: $green;
+	border-radius: 3px;
+    padding: 15px 45px;
+    font-size: 20px;
+    line-height: 1;
+    text-transform: uppercase;
+
+    cursor: hand;
+    -webkit-transition: padding 0.2s; /* Safari */
+    transition: padding 0.2s;
+
+    float: center;
+}
+
+.btn:hover {
+	padding: 17px 50px;
+}
+
 #start {
 	text-align: center;
 	//background: url(../img/pattern1.jpg) repeat center center;
 	height: 100vh;
-	min-height: 500px;
+	min-height: 600px;
 
 	background-color: #F3F3F3;
+
+	.row {
+		margin-bottom: 50px;
+	}
 }
 
 #start-logo {
-	background: url("/img/logo.png") no-repeat center center;
+	//background: url("../img/logo.png") no-repeat center center;
 	background-size: cover;
 	width: 22vw;
 	height: 22vw;
@@ -71,17 +101,7 @@ section {
 	margin: 0 auto;
 	-webkit-transition: width 0.2s,  height 0.2s; /* Safari */
     transition: width 0.2s, height 0.2s;
-
-	position: relative;
-    top: 50%;
-   -webkit-transform: translateY(-50%);
-   -ms-transform: translateY(-50%);
-   transform: translateY(-50%);
-}
-
-#start-logo:hover {
-	width: 24vw;
-	height: 24vw;
+    float: center;
 }
 
 .text-content {
@@ -105,7 +125,6 @@ section {
 
 	.btn {
 		background-color: $blue;
-		margin-top: 30px;
 	}
 }
 
@@ -119,23 +138,4 @@ section {
 	background-color: lighten($red, 30%);
 
 	h2 { color: $red; }
-}
-
-.btn {
-	display: inline-block;
-	color: $white;
-	background-color: $green;
-	border-radius: 3px;
-    padding: 15px 45px;
-    font-size: 20px;
-    line-height: 1;
-    text-transform: uppercase;
-
-    cursor: hand;
-    -webkit-transition: padding 0.2s; /* Safari */
-    transition: padding 0.2s;
-}
-
-.btn:hover {
-	padding: 17px 50px;
 }
