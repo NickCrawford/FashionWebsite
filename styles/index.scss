@@ -45,8 +45,27 @@ header {
 	left: 0;
 	right: 0;
 	height: 75px;
-	background-color: white;
+	background-color: rgba($white, 0.8);
+	opacity: 0;
 	z-index: 10;
+
+	transition: opacity 0.3s;
+
+	a {
+		text-decoration: none;
+		color: $green;
+		font-size: 25px;
+		margin-top: 15px;
+		:hover {
+
+		}
+	}
+}
+
+#header-logo {
+	margin: 5px auto;
+	width: 65px;
+	height: 65px;
 }
 
 section {

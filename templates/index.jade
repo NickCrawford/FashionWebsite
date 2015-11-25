@@ -22,15 +22,36 @@ html
               .css('oFilter',filterVal)
               .css('msFilter',filterVal);
         });
-      
+    script(type='text/javascript').
+        $(document).scroll(function() { 
+            var $section = $('#start');
+            console.log($(window).scrollTop())
+            if($(window).scrollTop() >= $section.height()) {
+                $('header').css('opacity','1');
+                console.log("show")
+            } else {
+              $('header').css('opacity','0');
+              console.log("hide")
+           }
+        });
+    script(type='text/javascript').
+        $(document).on('click', 'a[href^="#"]', function(e) {
+            var id = $(this).attr('href');
+            e.preventDefault();
+            var pos = $(id).offset().top;
+            $('body, html').animate({scrollTop: pos});
+        });
+                  
   body
     header
         div.container
             div.row
-                img(src="../img/logo.png").two.columns.u-pull-left
-                a(href="#about").two.columns.u-pull-right About
-                a(href="#sponsors").two.columns.u-pull-right Sponsors
-                a(href="#schedule").two.columns.u-pull-right Schedule
+                a(href="#start")
+                    img(src="../img/logo.png")#header-logo.two.columns.u-pull-left
+                a(href="#about").two.columns.offset-by-three About
+                a(href="#sponsors").two.columns Sponsors
+                a(href="#schedule").two.columns Schedule
+                a(href="#faq").two.columns FAQ
 
     section#start
         div.container
@@ -79,4 +100,5 @@ html
                 div.text-content.six.columns
                     p Text 2
     footer
+        
     
