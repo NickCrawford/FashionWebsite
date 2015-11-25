@@ -25,13 +25,10 @@ html
     script(type='text/javascript').
         $(document).scroll(function() { 
             var $section = $('#start');
-            console.log($(window).scrollTop())
-            if($(window).scrollTop() >= $section.height()) {
+            if($(window).scrollTop() >= $section.outerHeight()) {
                 $('header').css('opacity','1');
-                console.log("show")
             } else {
               $('header').css('opacity','0');
-              console.log("hide")
            }
         });
     script(type='text/javascript').
@@ -69,11 +66,24 @@ html
                     h2 What the hack is this?
                     p Hackathons are the new way to push the boundaries of what you know and learn what you don't. They provide an environment to learn, explore, and engage to complete a project with a set amount of time.
                     p Students spend 36 hours building whatever they want while talking to mentors and sponsors. You get to meet companies looking to hire while getting your hands on the latest tech. Students are given the opportunity to solve problems they see in the world by utilizing fashion and technology.
+                img(src='../img/4.png').four.columns
                 div.u-cf
 
+    
+    section#schedule
+        div.container
+            div.row
+                div.text-content.eight.columns.u-pull-left
+                    h2 Schedule
+                    p Our specific schedule is still a secret! However, we can tell you that the event is 36 hours of hacking and takes place 
+                    h3 January 29th - 31st.
+                img(src='../img/1.png').four.columns
+
+                 
     section#sponsors
         div.container
             div.row
+                img(src='../img/4.png').four.columns
                 div.text-content.eight.columns.u-pull-right
                     h2 Our sponsors are the best!
                     p Sponsoring this event gives the opportunity to meet creative and outgoing individuals found nowhere else! Please help support our event and allow us to continue making great things!
@@ -81,14 +91,6 @@ html
             div.row
                 a(href="#sponsor").eight.columns.u-pull-right
                     div.btn Sponsor
-
-    section#schedule
-        div.container
-            div.row
-                div.text-content.eight.columns.u-pull-left
-                    h2 Schedule
-                    p Our specific schedule is still a secret! However, we can tell you that the event is 36 hours of hacking and takes place 
-                    h3 January 29th - 31st. 
 
     section#faq
         div.container
@@ -99,6 +101,9 @@ html
                     p Text 1
                 div.text-content.six.columns
                     p Text 2
+            div.row
+                img(src='../img/1.png').four.columns.offset-by-four
+
     footer
-        
+
     

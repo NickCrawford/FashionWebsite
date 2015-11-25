@@ -1,8 +1,8 @@
 $green: #37b383; //rgba(55, 179, 131, 100)
-$blue: #0e9ab4; //rgba(14, 154, 180, 100)
-$purple: #57589e; //rgba(87, 88, 158, 100)
-$red: #d47e76; //rgba(212, 126, 118, 100)
-$yellow: #c8ffbe; //rgba(200, 255, 190, 100)
+$blue: #23AABF; //rgba(35, 170, 191, 100)
+$purple: #FF6300; //rgba(87, 88, 158, 100)
+$red: #CB48B7; //rgba(212, 126, 118, 100)
+$yellow: #FED05A; //rgba(200, 255, 190, 100)
 $gray: #838383;
 $white: #FFFFFF;
 
@@ -74,6 +74,11 @@ section {
 	margin: 0;
 	padding: 10vh;
 	min-height: 500px;
+
+}
+
+.full {
+	height: 100%;
 }
 
 .btn {
@@ -103,7 +108,7 @@ section {
 	height: 100vh;
 	min-height: 600px;
 
-	background-color: #F3F3F3;
+	background-color: $white;
 
 	.row {
 		margin-bottom: 50px;
@@ -130,7 +135,7 @@ section {
 }
 
 #about {
-	background-color: lighten($green, 50%);
+	background-color: lighten($green, 40%);
 }
 
 #about h2 {
@@ -138,7 +143,7 @@ section {
 }
 
 #sponsors {
-	background-color: lighten($blue, 50%);
+	background-color: lighten($blue, 40%);
 
 	h2 { color: $blue; }
 
@@ -148,13 +153,17 @@ section {
 }
 
 #schedule {
-	background-color: lighten($purple, 30%);
+	background-color: lighten($yellow, 10%);
+
+	h2 { color: darken($yellow, 20%); }
+}
+
+#faq {
+	background-color: lighten($purple, 20%);
 
 	h2 { color: $purple; }
 }
 
-#faq {
-	background-color: lighten($red, 30%);
-
-	h2 { color: $red; }
+footer {
+	background-color: rgba(19,19,19,0.8)
 }
