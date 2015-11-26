@@ -1,12 +1,12 @@
 $green: #37b383; //rgba(55, 179, 131, 100)
 $blue: #23AABF; //rgba(35, 170, 191, 100)
-$purple: #FF6300; //rgba(87, 88, 158, 100)
+$orange: #FF6300; //rgba(87, 88, 158, 100)
 $red: #CB48B7; //rgba(212, 126, 118, 100)
 $yellow: #FED05A; //rgba(200, 255, 190, 100)
-$gray: #838383;
+$gray: rgba(19,19,19,0.8);
 $white: #FFFFFF;
 
-$section-colors: $green, $blue, $purple, $red, $yellow;
+$section-colors: $green, $blue, $orange, $red, $yellow;
 
 *{
   font-family: Open Sans;
@@ -34,7 +34,7 @@ h2 {
 }
 
 p {
-	font-size: 1.5vmax;
+	font-size: 1.25vmax;
 	margin-bottom: 25px;
 }
 
@@ -68,13 +68,16 @@ header {
 	height: 65px;
 }
 
+#mobile-btn {
+	display: none;
+}
 section {
 	display: inline-block;
 	width: 100%;
 	margin: 0;
-	padding: 10vh;
+	padding: 10vh 0;
 	min-height: 500px;
-
+	position: relative;
 }
 
 .full {
@@ -92,14 +95,14 @@ section {
     text-transform: uppercase;
 
     cursor: hand;
-    -webkit-transition: padding 0.2s; /* Safari */
-    transition: padding 0.2s;
+    -webkit-transition: background-color 0.2s; /* Safari */
+    transition: background-color 0.2s;
 
     float: center;
 }
 
 .btn:hover {
-	padding: 17px 50px;
+	background-color: darken($green, 10%)
 }
 
 #start {
@@ -126,11 +129,10 @@ section {
 	-webkit-transition: width 0.2s,  height 0.2s; /* Safari */
     transition: width 0.2s, height 0.2s;
     float: center;
+    display: block !important;
 }
 
 .text-content {
-	width: 100%;
-	max-width: 50vw;
 	padding: 25px 40px;
 }
 
@@ -150,6 +152,10 @@ section {
 	.btn {
 		background-color: $blue;
 	}
+
+	.btn:hover {
+		background-color: darken($blue, 10%);
+	}
 }
 
 #schedule {
@@ -159,11 +165,54 @@ section {
 }
 
 #faq {
-	background-color: lighten($purple, 20%);
+	background-color: lighten($orange, 20%);
 
-	h2 { color: $purple; }
+	h2 { color: $orange; }
 }
 
 footer {
-	background-color: rgba(19,19,19,0.8)
+	background-color: $gray;
+	min-height: 300px;
 }
+
+
+/* Larger than mobile */
+@media (min-width: 400px) {
+	section {
+		img { display: none;}
+	}
+
+	#header-links {
+		display: none;
+	}
+
+	#mobile-btn {
+		display: inline-block;
+	}
+}
+	
+/* Larger than phablet */
+@media (min-width: 550px) {
+	
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+	#header-links {
+		display: block;
+	}
+
+	#mobile-btn {
+		display: none;
+	}
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+	section {
+		img { display: inline-block;}
+	}
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}

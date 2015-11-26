@@ -45,20 +45,25 @@ html
             div.row
                 a(href="#start")
                     img(src="../img/logo.png")#header-logo.two.columns.u-pull-left
-                a(href="#about").two.columns.offset-by-three About
-                a(href="#sponsors").two.columns Sponsors
-                a(href="#schedule").two.columns Schedule
-                a(href="#faq").two.columns FAQ
+                div#header-links
+                    a(href="#about").two.columns.offset-by-three About
+                    a(href="#schedule").two.columns Schedule
+                    a(href="#sponsors").two.columns Sponsors
+                    a(href="#faq").two.columns FAQ
+                div#mobile-btn
+
 
     section#start
         div.container
             div.row
                 img(src='../img/logo.png')#start-logo
+            div#start-info
+                h2 January 29 - 31, 2016
+                h3 Kent State University
             div.row
-                h2 January 29 - 31, 2016 | Kent State University
-            div.row
-                a(href="#apply")
-                    div.btn Apply
+                div.u-full-width
+                    a(href="#apply")
+                        div.btn Apply
     section#about
         div.container
             div.row
@@ -67,7 +72,7 @@ html
                     p Hackathons are the new way to push the boundaries of what you know and learn what you don't. They provide an environment to learn, explore, and engage to complete a project with a set amount of time.
                     p Students spend 36 hours building whatever they want while talking to mentors and sponsors. You get to meet companies looking to hire while getting your hands on the latest tech. Students are given the opportunity to solve problems they see in the world by utilizing fashion and technology.
                 img(src='../img/4.png').four.columns
-                div.u-cf
+                
 
     
     section#schedule
@@ -89,8 +94,9 @@ html
                     p Sponsoring this event gives the opportunity to meet creative and outgoing individuals found nowhere else! Please help support our event and allow us to continue making great things!
                     
             div.row
-                a(href="#sponsor").eight.columns.u-pull-right
-                    div.btn Sponsor
+                div.eight.columns.u-pull-right
+                    a(href="#sponsor")
+                        div.btn Sponsor
 
     section#faq
         div.container
@@ -102,8 +108,10 @@ html
                 div.text-content.six.columns
                     p Text 2
             div.row
-                img(src='../img/1.png').four.columns.offset-by-four
+                img(src='../img/2.png').four.columns.offset-by-four
 
     footer
+
+
 
     
