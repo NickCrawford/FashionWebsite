@@ -1,12 +1,12 @@
 $green: #37b383; //rgba(55, 179, 131, 100)
-$blue: #0e9ab4; //rgba(14, 154, 180, 100)
-$purple: #57589e; //rgba(87, 88, 158, 100)
-$red: #d47e76; //rgba(212, 126, 118, 100)
-$yellow: #c8ffbe; //rgba(200, 255, 190, 100)
-$gray: #838383;
+$blue: #23AABF; //rgba(35, 170, 191, 100)
+$orange: #FF6300; //rgba(87, 88, 158, 100)
+$red: #CB48B7; //rgba(212, 126, 118, 100)
+$yellow: #FED05A; //rgba(200, 255, 190, 100)
+$gray: rgba(19,19,19,0.8);
 $white: #FFFFFF;
 
-$section-colors: $green, $blue, $purple, $red, $yellow;
+$section-colors: $green, $blue, $orange, $red, $yellow;
 
 *{
   font-family: Open Sans;
@@ -22,7 +22,7 @@ body {
 
 h1 {
   color: $gray;
-  font-size: 2.5vmax;
+  font-size: 2.5vmax override;
   text-align: center;
   float: center;
   margin: 20px;
@@ -34,7 +34,7 @@ h2 {
 }
 
 p {
-	font-size: 1.5vmax;
+	font-size: 1.25vmax;
 	margin-bottom: 25px;
 }
 
@@ -42,101 +42,49 @@ header {
 	display: none;
 	position: fixed;
 	top: 0;
+	left: 0;
+	right: 0;
+	height: 75px;
+	background-color: rgba($white, 0.8);
+	opacity: 0;
+	z-index: 10;
+
+	transition: opacity 0.3s;
+
+	a {
+		text-decoration: none;
+		color: $green;
+		font-size: 25px;
+		margin-top: 15px;
+		:hover {
+
+		}
+	}
 }
 
+#header-logo {
+	margin: 5px auto;
+	width: 65px;
+	height: 65px;
+}
+
+#mobile-btn {
+	display: none;
+}
 section {
 	display: inline-block;
 	width: 100%;
 	margin: 0;
-	padding: 10vh;
+	padding: 10vh 0;
 	min-height: 500px;
-}
-
-img{
-  height:50%;
-}
-
-#start {
-	text-align: center;
-	//background: url(../img/pattern1.jpg) repeat center center;
-	height: 100vh;
-	min-height: 500px;
-
-	background-color: #F3F3F3;
-}
-
-.row {
-	margin: 0 auto;
-	height: 50vh;
-	min-height: 22vw;
-}
-
-#start-logo {
-	background: url(img/logo.png) no-repeat center center;
-	background-size: cover;
-	width: 22vw;
-	height: 22vw;
-	min-width: 200px;
-	min-height: 200px;
-	margin: 0 auto;
-	-webkit-transition: width 0.2s,  height 0.2s; /* Safari */
-    transition: width 0.2s, height 0.2s;
-
 	position: relative;
-    top: 50%;
-   -webkit-transform: translateY(-50%);
-   -ms-transform: translateY(-50%);
-   transform: translateY(-50%);
 }
 
-#start-logo:hover {
-	width: 24vw;
-	height: 24vw;
+.full {
+	height: 100%;
 }
 
-#start .button {
-	margin: 7vh auto;
-}
-
-.text-content {
-	width: 100%;
-	max-width: 50vw;
-	padding: 25px 40px;
-}
-
-#about {
-	background-color: lighten($green, 50%);
-}
-
-#about h2 {
-	color: $green;
-}
-
-#sponsors {
-	background-color: lighten($blue, 50%);
-}
-
-#sponsors h2 {
-	color: $blue;
-}
-
-#schedule {
-	background-color: lighten($purple, 30%);
-}
-
-#schedule h2 {
-	color: $purple;
-}
-
-#faq {
-	background-color: lighten($red, 30%);
-}
-
-#faq h2 {
-	color: $red;
-}
-
-.button {
+.btn {
 	display: inline-block;
 	color: $white;
 	background-color: $green;
@@ -147,32 +95,124 @@ img{
     text-transform: uppercase;
 
     cursor: hand;
-    -webkit-transition: padding 0.2s; /* Safari */
-    transition: padding 0.2s;
+    -webkit-transition: background-color 0.2s; /* Safari */
+    transition: background-color 0.2s;
 
-    position: relative;
-    top: 50%;
-   -webkit-transform: translateY(-50%);
-   -ms-transform: translateY(-50%);
-   transform: translateY(-50%);
+    float: center;
 }
 
-.button:hover {
-	padding: 17px 50px;
+.btn:hover {
+	background-color: darken($green, 10%)
 }
 
-.left {
-	float: left;
+#start {
+	text-align: center;
+	//background: url(../img/pattern1.jpg) repeat center center;
+	height: 100vh;
+	min-height: 600px;
 
-	:after {
-		clear: both;
+	background-color: $white;
+
+	.row {
+		margin-bottom: 50px;
 	}
 }
 
-.right {
-	float: right;
+#start-logo {
+	//background: url("../img/logo.png") no-repeat center center;
+	background-size: cover;
+	width: 22vw;
+	height: 22vw;
+	min-width: 200px;
+	min-height: 200px;
+	margin: 0 auto;
+	-webkit-transition: width 0.2s,  height 0.2s; /* Safari */
+    transition: width 0.2s, height 0.2s;
+    float: center;
+    display: block !important;
+}
 
-	:after {
-		clear: both;
+.text-content {
+	padding: 25px 40px;
+}
+
+#about {
+	background-color: lighten($green, 40%);
+}
+
+#about h2 {
+	color: $green;
+}
+
+#sponsors {
+	background-color: lighten($blue, 40%);
+
+	h2 { color: $blue; }
+
+	.btn {
+		background-color: $blue;
+	}
+
+	.btn:hover {
+		background-color: darken($blue, 10%);
 	}
 }
+
+#schedule {
+	background-color: lighten($yellow, 10%);
+
+	h2 { color: darken($yellow, 20%); }
+}
+
+#faq {
+	background-color: lighten($orange, 20%);
+
+	h2 { color: $orange; }
+}
+
+footer {
+	background-color: $gray;
+	min-height: 300px;
+}
+
+
+/* Larger than mobile */
+@media (min-width: 400px) {
+	section {
+		img { display: none;}
+	}
+
+	#header-links {
+		display: none;
+	}
+
+	#mobile-btn {
+		display: inline-block;
+	}
+}
+
+/* Larger than phablet */
+@media (min-width: 550px) {
+
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+	#header-links {
+		display: block;
+	}
+
+	#mobile-btn {
+		display: none;
+	}
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+	section {
+		img { display: inline-block;}
+	}
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}

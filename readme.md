@@ -1,4 +1,6 @@
 # Fashion / Tech Hackathon website
 
 - Uses Jade and Sass
-- Run 'gulp' to compile files
+- cd to project folder
+- run 'npm install'
+- Run 'gulp' to compile files in the background
