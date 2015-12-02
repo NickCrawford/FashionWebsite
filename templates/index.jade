@@ -53,40 +53,7 @@ html
     link(rel="stylesheet" href="css/skeleton.css")    
     link(href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css')
     script(type='text/javascript', src="http://code.jquery.com/jquery-1.9.1.min.js")
-    script(type='text/javascript').
-        $(document).mousemove(function( event ) {
-            var $logo = $('#start-logo');
-            var offset = $logo.offset();
-            var width = $logo.width();
-            var height = $logo.height();
-            var x = event.pageX - offset.left - width / 2;
-            var y = event.pageY - offset.top - height / 2;
-
-            var filterVal = 'hue-rotate('+ (((Math.atan2(y,x)*180)/Math.PI)-90) +'deg)';
-            $logo
-              .css('filter',filterVal)
-              .css('webkitFilter',filterVal)
-              .css('mozFilter',filterVal)
-              .css('oFilter',filterVal)
-              .css('msFilter',filterVal);
-        });
-    script(type='text/javascript').
-        $(document).scroll(function() { 
-            var $section = $('#start');
-            if($(window).scrollTop() >= $section.outerHeight()) {
-                $('header').css('opacity','1');
-            } else {
-              $('header').css('opacity','0');
-           }
-        });
-    script(type='text/javascript').
-        $(document).on('click', 'a[href^="#"]', function(e) {
-            var id = $(this).attr('href');
-            e.preventDefault();
-            var pos = $(id).offset().top;
-            $('body, html').animate({scrollTop: pos});
-        });
-                  
+              
   body
     header
         div.container
@@ -159,6 +126,70 @@ html
                 img(src='../img/2.png').four.columns.offset-by-four
 
     footer
+
+    script(type='text/javascript').
+        var curDegree = 0.0; //Current Hue Shift degrees
+
+        var mx = 0, my = 0; // relative to the logo
+        var $logo = $('#start-logo');
+        var offset = $logo.offset();
+        var centerX = offset.left + $logo.width()/2;
+        var centerY = offset.top + $logo.height()/2;
+
+        function step() {
+
+            var dx = mx - centerX,
+                dy = my - centerY,  
+                len = Math.sqrt(dx * dx + dy * dy);
+            dx /= len ? len : 1.0; dy /= len ? len : 1.0;
+            // get current direction
+            var dirx = Math.cos(curDegree),
+              diry = Math.sin(curDegree);
+            // ease the current direction to the target direction
+            dirx += (dx - dirx) * 0.1;
+            diry += (dy - diry) * 0.1;
+
+            curDegree = Math.atan2(diry, dirx);
+            console.log(dirx)
+
+            var filterVal = 'hue-rotate('+ ((curDegree*180)/Math.PI - 90) +'deg)';
+            $('#start-logo')
+              .css('filter',filterVal)
+              .css('webkitFilter',filterVal)
+              .css('mozFilter',filterVal)
+              .css('oFilter',filterVal)
+              .css('msFilter',filterVal);
+
+            requestAnimationFrame(step);
+        }
+
+        $(document).mousemove(function( event ) {
+            mx = event.pageX,
+            my = event.pageY;  
+        });
+
+        step();
+
+    script(type='text/javascript').
+        //Show/Hide header bar
+        $(document).scroll(function() { 
+            var $section = $('#start');
+            if($(window).scrollTop() >= $section.outerHeight()) {
+                $('header').css('opacity','1');
+                $('header').css('pointer-events','');
+            } else {
+              $('header').css('opacity','0');
+              $('header').css('pointer-events','none');
+           }
+        });
+    script(type='text/javascript').
+        //Smooth Scrolling
+        $(document).on('click', 'a[href^="#"]', function(e) {
+            var id = $(this).attr('href');
+            e.preventDefault();
+            var pos = $(id).offset().top;
+            $('body, html').animate({scrollTop: pos});
+        });
         
 
 
