@@ -102,6 +102,14 @@ section {
     float: center;
 }
 
+.seam {
+	position: absolute;
+	top: 0.5%;
+	left: 0;
+	height: 99%;
+	width: 100%;
+}
+
 .btn:hover {
 	background-color: darken($green, 10%)
 }
@@ -113,6 +121,11 @@ section {
 	min-height: 600px;
 
 	background-color: $white;
+
+	// seam
+	.seam {
+		border-bottom: 2px dashed lighten($green, 40%);
+	}
 
 	.row {
 		margin-bottom: 50px;
@@ -139,6 +152,11 @@ section {
 
 #about {
 	background-color: lighten($green, 40%);
+
+	.seam {
+		border-top: 2px dashed white;
+		border-bottom: 2px dashed lighten($yellow, 10%);
+	}
 }
 
 #about h2 {
@@ -157,18 +175,33 @@ section {
 	.btn:hover {
 		background-color: darken($blue, 10%);
 	}
+
+	.seam {
+		border-top: 2px dashed lighten($yellow, 10%);
+		border-bottom: 2px dashed lighten($orange, 20%);
+	}
 }
 
 #schedule {
 	background-color: lighten($yellow, 10%);
 
 	h2 { color: darken($yellow, 20%); }
+
+	.seam {
+		border-top: 2px dashed lighten($green, 40%);
+		border-bottom: 2px dashed lighten($blue, 40%);
+	}
 }
 
 #faq {
 	background-color: lighten($orange, 20%);
 
 	h2 { color: $orange; }
+
+	.seam {
+		border-top: 2px dashed lighten($blue, 40%);
+		border-bottom: 2px dashed $gray;
+	}
 }
 
 footer {
@@ -191,10 +224,10 @@ footer {
 		display: inline-block;
 	}
 }
-	
+
 /* Larger than phablet */
 @media (min-width: 550px) {
-	
+
 }
 
 /* Larger than tablet */
