@@ -2,10 +2,10 @@ html
   head
     link(rel="stylesheet" href="index.css")
     link(rel="stylesheet" href="css/normalize.css")
-    link(rel="stylesheet" href="css/skeleton.css")    
+    link(rel="stylesheet" href="css/skeleton.css")
     link(href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css')
     script(type='text/javascript', src="http://code.jquery.com/jquery-1.9.1.min.js")
-              
+
   body
     header
         div.container
@@ -21,6 +21,7 @@ html
 
 
     section#start
+        div.seam
         div.container
             div.row
                 img(src='../img/logo.png')#start-logo
@@ -32,6 +33,7 @@ html
                     a(href="#apply")
                         div.btn Apply
     section#about
+        div.seam
         div.container
             div.row
                 div.text-content.eight.columns.u-pull-left
@@ -39,33 +41,36 @@ html
                     p Hackathons are the new way to push the boundaries of what you know and learn what you don't. They provide an environment to learn, explore, and engage to complete a project with a set amount of time.
                     p Students spend 36 hours building whatever they want while talking to mentors and sponsors. You get to meet companies looking to hire while getting your hands on the latest tech. Students are given the opportunity to solve problems they see in the world by utilizing fashion and technology.
                 img(src='../img/4.png').four.columns
-                
 
-    
+
+
     section#schedule
+        div.seam
         div.container
             div.row
                 div.text-content.eight.columns.u-pull-left
                     h2 Schedule
-                    p Our specific schedule is still a secret! However, we can tell you that the event is 36 hours of hacking and takes place 
+                    p Our specific schedule is still a secret! However, we can tell you that the event is 36 hours of hacking and takes place
                     h3 January 29th - 31st.
                 img(src='../img/1.png').four.columns
 
-                 
+
     section#sponsors
+        div.seam
         div.container
             div.row
                 img(src='../img/4.png').four.columns
                 div.text-content.eight.columns.u-pull-right
                     h2 Our sponsors are the best!
                     p Sponsoring this event gives the opportunity to meet creative and outgoing individuals found nowhere else! Please help support our event and allow us to continue making great things!
-                    
+
             div.row
                 div.eight.columns.u-pull-right
                     a(href="#sponsor")
                         div.btn Sponsor
 
     section#faq
+        div.seam
         div.container
             div.row
                 h2 FAQ
@@ -91,7 +96,7 @@ html
         function step() {
 
             var dx = mx - centerX,
-                dy = my - centerY,  
+                dy = my - centerY,
                 len = Math.sqrt(dx * dx + dy * dy);
             dx /= len ? len : 1.0; dy /= len ? len : 1.0;
             // get current direction
@@ -117,14 +122,14 @@ html
 
         $(document).mousemove(function( event ) {
             mx = event.pageX,
-            my = event.pageY;  
+            my = event.pageY;
         });
 
         step();
 
     script(type='text/javascript').
         //Show/Hide header bar
-        $(document).scroll(function() { 
+        $(document).scroll(function() {
             var $section = $('#start');
             if($(window).scrollTop() >= $section.outerHeight()) {
                 $('header').css('opacity','1');
@@ -142,8 +147,7 @@ html
             var pos = $(id).offset().top;
             $('body, html').animate({scrollTop: pos});
         });
-        
 
 
 
-    
+
