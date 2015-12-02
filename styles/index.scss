@@ -9,7 +9,7 @@ $white: #FFFFFF;
 $section-colors: $green, $blue, $orange, $red, $yellow;
 
 *{
-  font-family: Open Sans;
+  font-family: Helvetica, Arial;
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
@@ -18,23 +18,36 @@ $section-colors: $green, $blue, $orange, $red, $yellow;
 body {
 	background-color: white;
 	text-align: center;
+  font-weight: normal;
 }
 
 h1 {
-  font-size: 2.5vmax override;
+  font-size: 3.998rem override;
   text-align: center;
   float: center;
   margin: 20px;
+  //font-weight: bold;
 }
 
 h2 {
-	font-size: 3vmax;
+	font-size: 2.827rem;
 	margin-bottom: 15px;
+  font-weight: bold;
+}
+
+h3{
+  font-weight: lighter;
+  font-size: 1.999rem;
 }
 
 p {
-	font-size: 1.25vmax;
+	font-size: 1rem;
 	margin-bottom: 25px;
+  font-weight: lighter;
+}
+
+li{
+  list-style: none;
 }
 
 header {
@@ -64,8 +77,6 @@ header {
 
 #header-logo {
 	margin: 5px auto;
-	width: 65px;
-	height: 65px;
 }
 
 #mobile-btn {
@@ -90,16 +101,17 @@ section {
 	color: $white;
 	background-color: $green;
 	border-radius: 3px;
-    padding: 15px 45px;
-    font-size: 20px;
-    line-height: 1;
-    text-transform: uppercase;
+  padding: 15px 45px;
+  margin-top:20px;
+  font-size: 20px;
+  line-height: 1;
+  text-transform: uppercase;
 
-    cursor: hand;
-    -webkit-transition: background-color 0.2s; /* Safari */
-    transition: background-color 0.2s;
+  cursor: hand;
+  -webkit-transition: background-color 0.2s; /* Safari */
+  transition: background-color 0.2s;
 
-    float: center;
+  float: center;
 }
 
 .seam {
@@ -135,8 +147,8 @@ section {
 #start-logo {
 	//background: url("../img/logo.png") no-repeat center center;
 	background-size: cover;
-	width: 22vw;
-	height: 22vw;
+	width: 40vh;
+	height: 40vh;
 	min-width: 200px;
 	min-height: 200px;
 	margin: 0 auto;
