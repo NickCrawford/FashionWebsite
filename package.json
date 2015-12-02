@@ -21,6 +21,7 @@
     "gulp-jade": "^1.1.0",
     "gulp-plumber": "^1.0.1",
     "gulp-sass": "^2.0.4",
-    "gulp-serve": "^1.2.0"
+    "gulp-serve": "^1.2.0",
+    "skeleton": "^0.1.2"
   }
 }
