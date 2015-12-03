@@ -11,6 +11,9 @@ gulp.task('templates', function () {
 });
 
 gulp.task('styles', function () {
+  gulp.src('styles/*/**.css')
+    .pipe(gulp.dest('dist'));
+
   return gulp.src('styles/*.scss')
     .pipe(sass())
     .pipe(gulp.dest('dist'));
