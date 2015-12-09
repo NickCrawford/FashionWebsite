@@ -26,7 +26,6 @@ h1 {
   text-align: center;
   float: center;
   margin: 20px;
-  //font-weight: bold;
 }
 
 h2 {
@@ -103,17 +102,17 @@ section {
 	color: $white;
 	background-color: $green;
 	border-radius: 3px;
-  padding: 15px 45px;
-  margin-top:20px;
-  font-size: 20px;
-  line-height: 1;
-  text-transform: uppercase;
+  	padding: 15px 45px;
+  	margin-top:20px;
+  	font-size: 20px;
+  	line-height: 1;
+  	text-transform: uppercase;
 
-  cursor: hand;
-  -webkit-transition: background-color 0.2s; /* Safari */
-  transition: background-color 0.2s;
+  	cursor: hand;
+  	-webkit-transition: background-color 0.2s; /* Safari */
+  	transition: background-color 0.2s;
 
-  float: center;
+  	float: center;
 }
 
 .seam {
@@ -220,7 +219,11 @@ section {
 
 footer {
 	background-color: $gray;
-	min-height: 300px;
+	padding: 50px 0;
+	img {
+		max-height: 75px;
+		width: 100%;
+	}
 }
 
 
