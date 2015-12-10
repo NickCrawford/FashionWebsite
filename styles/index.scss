@@ -40,7 +40,7 @@ h3{
 }
 
 p {
-	font-size: 1rem;
+	font-size: 1.5rem;
 	margin-bottom: 25px;
   font-weight: lighter;
 }
@@ -220,6 +220,10 @@ section {
 footer {
 	background-color: $gray;
 	padding: 50px 0;
+  h6 {
+    color:white;
+    font-weight: bold;
+  }
 	img {
 		max-height: 75px;
 		width: 100%;

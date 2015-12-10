@@ -3,9 +3,13 @@ html
     link(rel="stylesheet" href="index.css")
     link(rel="stylesheet" href="vendor/normalize.css")
     link(rel="stylesheet" href="vendor/skeleton.css")
+    link(rel='shortcut icon', href='../img/favicon.ico', type='image/x-icon')
+    link(rel='icon', href='../img/favicon.ico', type='image/x-icon')
     script(type='text/javascript', src="http://code.jquery.com/jquery-1.9.1.min.js")
 
   body
+    a#mlh-trust-badge(style='position:fixed;top:0;right:50px;max-width:100px;width:10%;min-width: 60px;display:block;z-index:10000', href='https://mlh.io/?utm_campaign=Trust%20Badge', target='_blank')
+      img(src='https://s3.amazonaws.com/logged-assets/trust-badge/s2016.png', alt='MLH Official - Spring 2016', style='width:100%;')
     header
         div.container
             div.row
@@ -18,7 +22,6 @@ html
                     a(href="#faq").two.columns FAQ
                 div#mobile-btn
 
-
     section#start
         div.seam
         div.container
@@ -29,7 +32,7 @@ html
                 h3 Kent State University
             div.row
                 div.u-full-width
-                    a(href="#apply")
+                    a(href="register.html")
                         div.btn Register
     section#about
         div.seam
@@ -82,19 +85,54 @@ html
 
             div.row
                 div.eight.columns.u-pull-right
-                    a(href="#sponsor")
+                    a(href="../img/SponsorshipPacket.pdf")
                         div.btn Sponsor
 
     section#faq
         div.seam
         div.container
             div.row
-                h2 FAQ
+                h2 Frequently Asked Questions
             div.row
                 div.text-content.six.columns
-                    p Text 1
+                    h3 What is a hackathon?
+                    p A hackathon is a weekend long event where students from all 
+                      | majors can develop a project (like an app or website) with
+                      | the best resources and mentors to learn.
                 div.text-content.six.columns
-                    p Text 2
+                    h3 Who can attend?
+                    p Any student, high school - grad school may participate. Others
+                      | who wish to be involved may come and mentor. Minors are encouraged
+                      | to attend, but they must email us (rbonates@kent.edu) for a 
+                      | waiver to sign before the event.
+            div.row
+                div.text-content.six.columns
+                    h3 How much does this cost?
+                    p Nothing! The Fashion / Tech Hackathon is free for all to attend.
+                      | We'll provide your meals and swag for the weekend, and in
+                      | some cases we'll even provide travel reimbursement up to $100.
+                div.text-content.six.columns
+                    h3 What are the prizes?
+                    p This year, we'll be handling prizes differently. Instead of
+                      | first, second and third, we'll have four category prizes:
+                      | Creation of a new technology, Advancement of an existing technology, 
+                      | Use of Technology in Creating New Fashion Products, Tech 
+                      | Advancement of the Retail Experience. 
+            div.row
+                div.text-content.six.columns
+                    h3 What if I know nothing about tech?
+                    p You should still come! Hackathons are designed for you to learn,
+                      | plus, our event celebrates makers of all kinds, including
+                      | designers, merchandisers, sewers, and more.
+                div.text-content.six.columns
+                    h3 What are the rules?
+                    p Teams can consist of 1-4 students, and the entire project
+                      | must be built at the event. You may use publicly available
+                      | libraries, but besides that no lines of code should be written,
+                      | and no seams should be sewn.
+                    p Hackers must also adhere to 
+                      a(href="http://static.mlh.io/docs/mlh-code-of-conduct.pdf")
+                        | MLH's Code of Conduct
             div.row
                 img(src='../img/2.png').four.columns.offset-by-four
 
@@ -102,11 +140,13 @@ html
         div.container
             div.row
                 div.twelve.columns
+                    h6 POWERED BY:
                     a(href='http://hacksu.cs.kent.edu').two.columns.offset-by-two
                         img(src='../img/hacksu-logo.png')
-                    a(href='http://www.tech-style-lab.org/').three.columns
+                    a(href='http://www.tech-style-lab.org/').two.columns
                         img(src='../img/TechStyleLab-logo.png')
-                    img(src='../img/LaunchNET-logo.png').three.columns
+                    img(src='../img/LaunchNET-logo.png').two.columns
+                    img(src='../img/mlh-logo.png').two.columns
                     
 
 
