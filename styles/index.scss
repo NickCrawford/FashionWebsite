@@ -220,6 +220,10 @@ section {
 footer {
 	background-color: $gray;
 	padding: 50px 0;
+  h6 {
+    color:white;
+    font-weight: bold;
+  }
 	img {
 		max-height: 75px;
 		width: 100%;
