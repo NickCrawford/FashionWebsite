@@ -244,6 +244,7 @@ footer {
 	#mobile-btn {
 		display: inline-block;
 	}
+
 }
 
 /* Larger than phablet */
@@ -253,6 +254,24 @@ footer {
 
 /* Larger than tablet */
 @media (min-width: 750px) {
+	section {
+		img { display: inline-block;}
+	}
+}
+
+@media (max-width: 750px) {
+	section {
+		text-align: center !important;
+
+		.columns, .column {
+			width: 100% !important;
+		}
+	}
+}
+
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
 	#header-links {
 		display: block;
 	}
@@ -260,13 +279,7 @@ footer {
 	#mobile-btn {
 		display: none;
 	}
-}
-
-/* Larger than desktop */
-@media (min-width: 1000px) {
-	section {
-		img { display: inline-block;}
-	}
+	
 }
 
 /* Larger than Desktop HD */
