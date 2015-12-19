@@ -233,10 +233,6 @@ footer {
     color:white;
     font-weight: bold;
   }
-	img {
-		max-height: 75px;
-		width: 100%;
-	}
 }
 
 
@@ -254,11 +250,23 @@ footer {
 		display: inline-block;
 	}
 
+	footer {
+		img {
+			height: 75px;
+			padding: 10px 0;
+		}
+	}
+
 }
 
 /* Larger than phablet */
 @media (min-width: 550px) {
-
+	footer {
+		img {
+			max-height: 75px;
+			width: 100%;
+		}
+	}
 }
 
 /* Larger than tablet */
