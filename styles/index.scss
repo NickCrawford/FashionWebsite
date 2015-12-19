@@ -14,11 +14,14 @@ $section-colors: $green, $blue, $orange, $red, $yellow;
   margin: 0px;
   box-sizing: border-box;
 }
+html {
+	height: 100%;
+}
 
 body {
 	background-color: white;
-	text-align: center;
-  font-weight: normal;
+  	font-weight: normal;
+  	height: 100%;
 }
 
 h1 {
@@ -31,7 +34,8 @@ h1 {
 h2 {
 	font-size: 2.827rem;
 	margin-bottom: 15px;
-  font-weight: bold;
+  	font-weight: bold;
+  	text-align: center;
 }
 
 h3{
@@ -42,11 +46,13 @@ h3{
 p {
 	font-size: 1.5rem;
 	margin-bottom: 25px;
-  font-weight: lighter;
+	font-weight: lighter;
+	text-align: justify;
 }
 
 li{
   list-style: none;
+  text-align: justify;
 }
 
 header {
@@ -84,17 +90,17 @@ header {
 	display: none;
 }
 section {
-	display: inline-block;
 	width: 100%;
+	min-height: 100px;
 	margin: 0;
 	padding: 10vh 0;
-	min-height: 500px;
 	position: relative;
 	vertical-align: middle;
-}
+	text-align: center;
 
-.full {
-	height: 100%;
+	img:not(#start-logo) {
+		width: 100%;
+	}
 }
 
 .btn {
@@ -200,6 +206,8 @@ section {
 
 	h2 { color: darken($yellow, 20%); }
 
+	p {text-align: center;}
+
 	.seam {
 		border-top: 2px dashed lighten($green, 40%);
 		border-bottom: 2px dashed lighten($blue, 40%);
@@ -220,6 +228,7 @@ section {
 footer {
 	background-color: $gray;
 	padding: 50px 0;
+	text-align: center;
   h6 {
     color:white;
     font-weight: bold;
