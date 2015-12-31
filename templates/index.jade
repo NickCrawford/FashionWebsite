@@ -23,73 +23,77 @@ html
                 div#mobile-btn
 
     section#start
-        div.seam
-        div.container
-            div.row
-                img(src='../img/logo.png')#start-logo
-            div#start-info
-                h2 January 29 - 31, 2016
-                h3 Kent State University
-            div.row
-                div.u-full-width
-                    a(href="register.html")
-                        div.btn Register
+      div.image-container.top
+        img(src='../img/top.svg')
+      div.seam
+      div.container
+          div.row
+              img(src='../img/logo.png')#start-logo
+          div#start-info
+              h2 January 29 - 31, 2016
+              h3 Kent State University
+          div.row
+              div.u-full-width
+                  a(href="register.html")
+                      div.btn Register
+      div.image-container.bottom
+        img(src='../img/bottom.svg')
     section#about
-        div.seam
-        div.container
-            div.row
-                div.text-content.eight.columns
-                    h2 Redefine the future of fashion.
-                    p Hackathons are the new way to push the boundaries of what you know
-                      | and learn what you don't. They provide an environment to learn,
-                      | explore, and engage to complete a project with a set amount of time.
-                      | Students spend 36 hours building a project of their choice,
-                      | such an app or a garment, while getting support from mentors
-                      | and sponsors. Participants meet companies looking to hire while
-                      | getting their hands on the latest tech. Students are given the opportunity
-                      | to solve problems they see in the world by utilizing fashion and technology.
+      div.seam
+      div.container
+          div.row
+              div.text-content.eight.columns
+                  h2 Redefine the future of fashion.
+                  p Hackathons are the new way to push the boundaries of what you know
+                    | and learn what you don't. They provide an environment to learn,
+                    | explore, and engage to complete a project with a set amount of time.
+                    | Students spend 36 hours building a project of their choice,
+                    | such an app or a garment, while getting support from mentors
+                    | and sponsors. Participants meet companies looking to hire while
+                    | getting their hands on the latest tech. Students are given the opportunity
+                    | to solve problems they see in the world by utilizing fashion and technology.
 
-                    p This year, we'll be having 4 different prize categories:
-                      ul
-                        li Creation of a new technology
-                        li Advancement of an existing technology
-                        li Use of Technology in Creating New Fashion Products
-                        li Tech Advancement of the retail experience
-                div.four.columns.image-col
-                    img(src='../img/5.png')
+                  p This year, we'll be having 4 different prize categories:
+                    ul
+                      li Creation of a new technology
+                      li Advancement of an existing technology
+                      li Use of Technology in Creating New Fashion Products
+                      li Tech Advancement of the retail experience
+              div.four.columns.image-col
+                  img(src='../img/5.png')
 
     section#schedule
-        div.seam
-        div.container
-            div.row
-                div.four.columns.image-col
-                    img(src='../img/1.png')
-                div.text-content.eight.columns.u-pull-right
-                    h2 Schedule
-                    h3 January 29th-31st
-                    br
-                    p A detailed schedule will be released soon.
+      div.seam
+      div.container
+          div.row
+              div.four.columns.image-col
+                  img(src='../img/1.png')
+              div.text-content.eight.columns.u-pull-right
+                  h2 Schedule
+                  h3 January 29th-31st
+                  br
+                  p A detailed schedule will be released soon.
 
     section#sponsors
-        div.seam
-        div.container
-            div.row
-                div.text-content.eight.columns.u-pull-left
-                    h2 Get involved as a sponsor.
-                    p Our sponsors get a variety of benefits, like recruiting
-                      | and marketing opportunities. We attract top talent from
-                      | the world's best fashion and engineering schools. Our
-                      | attendees are some of the most diverse hackers. Last year,
-                      | out of 144 students, we saw 60% female participants from
-                      | 23 different majors and 14 different universities. See
-                      | below for more information, or contact Robin at rbonates@kent.edu.
-                div.four.columns.image-col
-                    img(src='../img/4.png')
+      div.seam
+      div.container
+          div.row
+              div.text-content.eight.columns.u-pull-left
+                  h2 Get involved as a sponsor.
+                  p Our sponsors get a variety of benefits, like recruiting
+                    | and marketing opportunities. We attract top talent from
+                    | the world's best fashion and engineering schools. Our
+                    | attendees are some of the most diverse hackers. Last year,
+                    | out of 144 students, we saw 60% female participants from
+                    | 23 different majors and 14 different universities. See
+                    | below for more information, or contact Robin at rbonates@kent.edu.
+              div.four.columns.image-col
+                  img(src='../img/4.png')
 
-            div.row
-                div.eight.columns.u-pull-left
-                    a(href="../img/SponsorshipPacket.pdf")
-                        div.btn Sponsor
+          div.row
+              div.eight.columns.u-pull-left
+                  a(href="../img/SponsorshipPacket.pdf")
+                      div.btn Sponsor
 
     section#faq
         div.seam
@@ -157,6 +161,44 @@ html
 
 
     script(type='text/javascript').
+        function rgb2hsv (r,g,b) {
+           var computedH = 0;
+           var computedS = 0;
+           var computedV = 0;
+
+           //remove spaces from input RGB values, convert to int
+           var r = parseInt( (''+r).replace(/\s/g,''),10 );
+           var g = parseInt( (''+g).replace(/\s/g,''),10 );
+           var b = parseInt( (''+b).replace(/\s/g,''),10 );
+
+           if ( r==null || g==null || b==null ||
+               isNaN(r) || isNaN(g)|| isNaN(b) ) {
+             alert ('Please enter numeric RGB values!');
+             return;
+           }
+           if (r<0 || g<0 || b<0 || r>255 || g>255 || b>255) {
+             alert ('RGB values must be in the range 0 to 255.');
+             return;
+           }
+           r=r/255; g=g/255; b=b/255;
+           var minRGB = Math.min(r,Math.min(g,b));
+           var maxRGB = Math.max(r,Math.max(g,b));
+
+           // Black-gray-white
+           if (minRGB==maxRGB) {
+            computedV = minRGB;
+            return [0,0,computedV];
+           }
+
+           // Colors other than black-gray-white:
+           var d = (r==minRGB) ? g-b : ((b==minRGB) ? r-g : b-r);
+           var h = (r==minRGB) ? 3 : ((b==minRGB) ? 1 : 5);
+           computedH = 60*(h - d/(maxRGB - minRGB));
+           computedS = (maxRGB - minRGB)/maxRGB;
+           computedV = maxRGB;
+           return [computedH,computedS,computedV];
+          }
+
         var curAngle = 0.0; //Current Hue Shift degrees
 
         var mx = 0, my = 0; // relative to the logo
@@ -182,6 +224,22 @@ html
 
             var filterVal = 'hue-rotate('+ ((curAngle*180)/Math.PI - 90) +'deg)';
             $('#start-logo')
+              .css('filter',filterVal)
+              .css('webkitFilter',filterVal)
+              .css('mozFilter',filterVal)
+              .css('oFilter',filterVal)
+              .css('msFilter',filterVal);
+
+            filterVal = 'hue-rotate('+ ((curAngle*180)/Math.PI + 90) +'deg)';
+            $('.image-container.top')
+              .css('filter',filterVal)
+              .css('webkitFilter',filterVal)
+              .css('mozFilter',filterVal)
+              .css('oFilter',filterVal)
+              .css('msFilter',filterVal);
+
+            filterVal = 'hue-rotate('+ ((curAngle*180)/Math.PI) +'deg)';
+            $('.image-container.bottom')
               .css('filter',filterVal)
               .css('webkitFilter',filterVal)
               .css('mozFilter',filterVal)
