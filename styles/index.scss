@@ -188,20 +188,18 @@ section {
 #about {
 	background-color: lighten($green, 40%);
 
+	h2 { color: $green;}
+
 	.seam {
 		border-top: 2px dashed white;
 		border-bottom: 2px dashed lighten($yellow, 10%);
 	}
 }
 
-#about h2 {
-	color: $green;
-}
-
 #sponsors {
 	background-color: lighten($blue, 40%);
 
-	h2 { color: $blue; }
+	h2 { color: $blue;}
 
 	.btn {
 		background-color: $blue;
@@ -222,12 +220,18 @@ section {
 
 	h2 { color: darken($yellow, 20%); }
 
-	p {text-align: center;}
+	p {
+		white-space: pre;
+		line-height: 1.5;
+		text-align: center;
+	}
 
 	.seam {
 		border-top: 2px dashed lighten($green, 40%);
 		border-bottom: 2px dashed lighten($blue, 40%);
 	}
+
+
 }
 
 #faq {
@@ -289,6 +293,10 @@ footer {
 @media (min-width: 750px) {
 	section {
 		img { display: inline-block;}
+	}
+
+	#schedule p {
+			text-align: left !important;
 	}
 }
 

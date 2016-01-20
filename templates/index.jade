@@ -1,5 +1,6 @@
 html
   head
+    meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel="stylesheet" href="index.css")
     link(rel="stylesheet" href="vendor/normalize.css")
     link(rel="stylesheet" href="vendor/skeleton.css")
@@ -64,21 +65,21 @@ html
 
     section#schedule
       div.seam
+      h2 Schedule    
+      include schedule.jade
+        div.row
       div.container
-          div.row
-              div.four.columns.image-col
-                  img(src='../img/1.png')
-              div.text-content.eight.columns.u-pull-right
-                  h2 Schedule
-                  h3 January 29th-31st
-                  br
-                  p A detailed schedule will be released soon.
+        div.row
+          div.four.columns.image-col.offset-by-four
+            img(src='../img/1.png')
 
     section#sponsors
       div.seam
       div.container
           div.row
-              div.text-content.eight.columns.u-pull-left
+              div.four.columns.image-col
+                  img(src='../img/4.png')
+              div.text-content.eight.columns
                   h2 Get involved as a sponsor.
                   p Our sponsors get a variety of benefits, like recruiting
                     | and marketing opportunities. We attract top talent from
@@ -87,11 +88,10 @@ html
                     | out of 144 students, we saw 60% female participants from
                     | 23 different majors and 14 different universities. See
                     | below for more information, or contact Robin at rbonates@kent.edu.
-              div.four.columns.image-col
-                  img(src='../img/4.png')
+              
 
           div.row
-              div.eight.columns.u-pull-left
+              div.eight.columns.u-pull-right
                   a(href="../img/SponsorshipPacket.pdf")
                       div.btn Sponsor
 
